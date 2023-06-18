@@ -47,8 +47,7 @@ public class GameManager : MonoBehaviour
     {
         if(tempoEmSegundos <= 0)
         {
-            gameplayElements.SetActive(false);
-            pontuacaoFinalUi.text = _pontuação.ToString();
+            gameplayElements.SetActive(false);            
             telaReiniciar.SetActive(true);
             return;
         }
@@ -130,10 +129,12 @@ public class GameManager : MonoBehaviour
 
     void AtualizarPontuacao(int valor){
         _pontuação += valor;
-        pontuacaoUi.text = "Pontuação: " + _pontuação.ToString();
 
         if(_pontuação < 0){
             _pontuação = 0;
         }
+
+        pontuacaoUi.text = "Pontuação: " + _pontuação.ToString();        
+        pontuacaoFinalUi.text = _pontuação.ToString();
     }
 }
