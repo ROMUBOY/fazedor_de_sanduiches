@@ -1,2 +1,4 @@
 **/shaders/* linguist-vendored
 **/cginc/* linguist-vendored
+shader linguist-vendored
+cginc linguist-vendored
